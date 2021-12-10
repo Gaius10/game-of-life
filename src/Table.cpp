@@ -39,7 +39,7 @@ int Table::getSizeY()
 
 void Table::setCell(int x, int y, bool value)
 {
-    this->table[x][y] = value;
+    this->table[y][x] = value;
 }
 
 void Table::update()

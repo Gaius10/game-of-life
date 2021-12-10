@@ -30,8 +30,9 @@ void Game::initializeFromFile(const std::string filename)
     if (file.is_open()) {
         while(getline(file, line)) {
             for (char c : line) {
-                if (c == 'X')
+                if (c == 'X') {
                     this->table->setCell(columnNumber, lineNumber, true);
+                }
                 columnNumber++;
             }
             lineNumber++;

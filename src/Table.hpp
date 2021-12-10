@@ -5,17 +5,12 @@
 
 using namespace std;
 
-typedef struct {
-    int x;
-    int y;
-} tableSize;
 
 class Table {
 private:
     int sizeX;
     int sizeY;
     vector<vector<bool>> table;
-    // bool table[40][40];
 public:
     Table(int, int);
     vector<vector<bool>> getTable();
