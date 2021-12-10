@@ -8,8 +8,8 @@ After downloading this source, run:
 
 
 ```bash
-\$ make && make clean
-\$ ./live
+make && make clean
+./live
 ```
 
 Then take a look at gaming.txt file.
