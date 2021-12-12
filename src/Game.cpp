@@ -43,10 +43,12 @@ void Game::initializeFromFile(const std::string filename)
 
 void Game::run()
 {
+    int round = 0;
     while (true) {
         // std::cout << "Running..." << std::endl;
         this->table->update();
         this->drawer->draw(this->table);
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::cout << "\r Round: " << round++ << std::flush;
     }
 }
