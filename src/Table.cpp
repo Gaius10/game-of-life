@@ -44,23 +44,29 @@ void Table::setCell(int x, int y, bool value)
 
 void Table::update()
 {
+    vector<vector<bool>> newTable;
+    newTable.resize(this->sizeY);
     for (int i = 0; i < this->table.size(); i++) {
+        newTable[i].resize(this->sizeX);
+
         for (int j = 0; j < this->table[i].size(); j++) {
             const int communityPoints = this->getCommunity(i, j);
 
             switch (communityPoints) {
                 case 3:
-                    this->table[i][j] = true;
+                    newTable[i][j] = true;
                     break;
                 case 2:
-                    this->table[i][j] = this->table[i][j];
+                    newTable[i][j] = this->table[i][j];
                     break;
                 default:
-                    this->table[i][j] = false;
+                    newTable[i][j] = false;
                     break;
             }
         }
     }
+
+    this->table = newTable;
 }
 
 int Table::getCommunity(int x, int y)
