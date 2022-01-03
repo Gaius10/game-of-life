@@ -12,7 +12,7 @@ make && make clean
 ```
 
 Then take a look at gaming.txt file.
-You can mannually modify this file to see a different behavior.
+You can manually modify this file to see a different behavior.
 
 Enjoy!
 
